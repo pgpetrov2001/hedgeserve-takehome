@@ -1,0 +1,11 @@
+span {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+span svg {
+    width: 100%;
+    height: 100%;
+}

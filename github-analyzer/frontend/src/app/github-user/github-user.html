@@ -1,7 +1,12 @@
 <div><a [href]="userData().html_url" target="_blank">{{userData().name ?? userData().login}}</a></div>
 <div><a [href]="`https://github.com/${userData().login}?tab=repositories`" target="_blank">{{ userData().public_repos }} Repos</a></div>
 <p>{{ userData().followers }} Followers</p>
-<p>Most Used Language: {{ userData().mostUsedLanguage }}</p>
+@if (userData().mostUsedLanguage) {
+    <p>
+        Most Used Language:
+        <app-language-icon [language]="userData().mostUsedLanguage!" /> {{ userData().mostUsedLanguage }}
+    </p>
+}
 <p>Created At: {{ userData().created_at }}</p>
 
 @if (userData().reposList.length === 0) {
