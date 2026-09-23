@@ -1,13 +1,19 @@
+<main class="app-shell">
+    <header class="app-header">
+        <p class="eyebrow">GitHub profile explorer</p>
+        <h1>Github Analyzer</h1>
+        <p class="app-intro">Search a username to inspect profile details, stats, and repositories in one place.</p>
+    </header>
 
-<h1>Github Analyzer</h1>
+    <app-search (search)="search($event)"></app-search>
 
-<app-search (search)="search($event)"></app-search>
+    @if (userData()) {
+        <section class="results-panel">
+            <app-github-user [userData]="userData()!" />
+        </section>
+    } @else if (error()) {
+        <p class="error">{{ error() }}</p>
+    }
 
-@if (userData()) {
-    <div>
-        <app-github-user [userData]="userData()!"/>
-    </div>
-} @else if (error()) {
-    <p class="error">{{ error() }}</p>
-}
-<router-outlet />
+    <router-outlet />
+</main>

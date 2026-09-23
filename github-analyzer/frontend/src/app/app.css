@@ -1,3 +1,75 @@
+:host {
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.app-shell {
+    min-height: 100vh;
+    padding: 3rem 1.5rem 4rem;
+    background:
+        radial-gradient(circle at top left, rgba(76, 110, 245, 0.18), transparent 32%),
+        radial-gradient(circle at top right, rgba(46, 196, 182, 0.14), transparent 28%),
+        linear-gradient(180deg, #0f172a 0%, #111827 45%, #0b1220 100%);
+    color: #e5e7eb;
+    font-family: Inter, system-ui, sans-serif;
+}
+
+.app-header,
+.results-panel,
+.error,
+app-search {
+    width: min(1100px, 100%);
+    margin: 0 auto;
+}
+
+.app-header {
+    margin-bottom: 1.75rem;
+}
+
+.eyebrow {
+    margin: 0 0 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #93c5fd;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1;
+}
+
+.app-intro {
+    max-width: 56ch;
+    margin: 0.85rem 0 0;
+    color: #cbd5e1;
+    font-size: 1.02rem;
+}
+
+.results-panel {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(148, 163, 184, 0.16);
+    border-radius: 24px;
+    background: rgba(15, 23, 42, 0.7);
+    box-shadow: 0 24px 60px rgba(2, 6, 23, 0.35);
+    backdrop-filter: blur(14px);
+}
+
 .error {
-    color: red;
+    margin-top: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 16px;
+    background: rgba(239, 68, 68, 0.12);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #fecaca;
 }

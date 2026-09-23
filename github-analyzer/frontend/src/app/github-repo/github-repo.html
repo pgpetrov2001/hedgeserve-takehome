@@ -1,7 +1,11 @@
-<div>
+<article>
     <a [href]="repoData().html_url" target="_blank">Repo {{ repoData().full_name }}</a>
-    <p>Forked {{ repoData().forks_count }} times</p>
-    @if (repoData().language) {
-        Language: <app-language-icon [language]="repoData().language!" /> {{ repoData().language }}
+    @if (repoData().forks_count > 0) {
+        <p>Forked {{ repoData().forks_count }} times</p>
     }
-</div>
+    @if (repoData().language) {
+        <p>
+            Language: <app-language-icon [language]="repoData().language!" /> {{ repoData().language }}
+        </p>
+    }
+</article>

@@ -1,0 +1,130 @@
+:host {
+	display: block;
+}
+
+:host a {
+	color: inherit;
+	text-decoration: none;
+}
+
+:host a:hover,
+:host a:focus-visible {
+	text-decoration: underline;
+}
+
+.repos-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 1rem;
+	align-items: stretch;
+}
+
+.profile-card {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+	color: #e2e8f0;
+}
+
+.profile-header {
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	align-items: flex-start;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.profile-name {
+	display: inline-block;
+	font-size: clamp(1.5rem, 3vw, 2.3rem);
+	font-weight: 800;
+	line-height: 1.05;
+	letter-spacing: -0.03em;
+}
+
+.profile-handle {
+	margin: 0.35rem 0 0;
+	color: #94a3b8;
+}
+
+.profile-badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	justify-content: flex-end;
+}
+
+.profile-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.7rem 1rem;
+	border-radius: 999px;
+	background: linear-gradient(135deg, rgba(96, 165, 250, 0.2), rgba(59, 130, 246, 0.08));
+	border: 1px solid rgba(96, 165, 250, 0.22);
+	font-weight: 700;
+}
+
+.profile-badge--ghost {
+	background: rgba(148, 163, 184, 0.09);
+	border-color: rgba(148, 163, 184, 0.18);
+}
+
+.profile-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.65rem;
+	padding: 1rem 1.1rem;
+	border-radius: 18px;
+	background: rgba(15, 23, 42, 0.55);
+	border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.profile-meta-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: 0.85rem;
+}
+
+.profile-meta-block {
+	padding: 1rem;
+	border-radius: 18px;
+	background: rgba(255, 255, 255, 0.04);
+	border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.profile-meta-label {
+	display: block;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	color: #94a3b8;
+	margin-bottom: 0.4rem;
+}
+
+.profile-meta-value {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.45rem;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.repos-title {
+	margin: 0;
+	font-size: 1.05rem;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: #cbd5e1;
+}
+
+.empty-state {
+	margin: 0;
+	padding: 1rem 1.1rem;
+	border-radius: 16px;
+	background: rgba(148, 163, 184, 0.08);
+	border: 1px dashed rgba(148, 163, 184, 0.2);
+	color: #cbd5e1;
+}

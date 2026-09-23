@@ -1,19 +1,42 @@
-<div><a [href]="userData().html_url" target="_blank">{{userData().name ?? userData().login}}</a></div>
-<div><a [href]="`https://github.com/${userData().login}?tab=repositories`" target="_blank">{{ userData().public_repos }} Repos</a></div>
-<p>{{ userData().followers }} Followers</p>
-@if (userData().mostUsedLanguage) {
-    <p>
-        Most Used Language:
-        <app-language-icon [language]="userData().mostUsedLanguage!" /> {{ userData().mostUsedLanguage }}
-    </p>
-}
-<p>Created At: {{ userData().created_at }}</p>
+<section class="profile-card">
+    <div class="profile-header">
+        <div>
+            <a class="profile-name" [href]="userData().html_url" target="_blank">{{ userData().name ?? userData().login }}</a>
+            <p class="profile-handle">@{{ userData().login }}</p>
+        </div>
 
-@if (userData().reposList.length === 0) {
-    <p>User has no repos</p>
-} @else {
-    <h4>Repos:</h4>
-    @for (repo of userData().reposList; track $index) {
-        <app-github-repo [repoData]="repo" />
+        <div class="profile-badges">
+            <a class="profile-badge" [href]="`https://github.com/${userData().login}?tab=repositories`" target="_blank">
+                {{ userData().public_repos }} Repos
+            </a>
+            <span class="profile-badge profile-badge--ghost">{{ userData().followers }} Followers</span>
+        </div>
+    </div>
+
+    @if (userData().mostUsedLanguage) {
+        <div class="profile-meta">
+            <span class="profile-meta-label">Most used language</span>
+            <span class="profile-meta-value">
+                <app-language-icon [language]="userData().mostUsedLanguage!" /> {{ userData().mostUsedLanguage }}
+            </span>
+        </div>
     }
-}
+
+    <div class="profile-meta-grid">
+        <div class="profile-meta-block">
+            <span class="profile-meta-label">Created at</span>
+            <span class="profile-meta-value">{{ userData().created_at }}</span>
+        </div>
+    </div>
+
+    @if (userData().reposList.length === 0) {
+        <p class="empty-state">User has no repos</p>
+    } @else {
+        <h4 class="repos-title">Repos</h4>
+        <div class="repos-grid">
+            @for (repo of userData().reposList; track $index) {
+                <app-github-repo [repoData]="repo" />
+            }
+        </div>
+    }
+</section>
