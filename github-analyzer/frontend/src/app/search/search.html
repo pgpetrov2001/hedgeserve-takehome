@@ -1,2 +1,15 @@
-<input type="text" placeholder="Type GitHub username to search" [(ngModel)]="searchValue">
-<button (click)="doSearch()">Search</button>
+<form class="search-bar" (ngSubmit)="doSearch()">
+	<label class="search-label" for="github-search">GitHub username</label>
+	<div class="search-controls">
+		<input
+			id="github-search"
+			type="text"
+			placeholder="Type GitHub username to search"
+			[(ngModel)]="searchValue"
+			name="searchValue"
+			autocomplete="off"
+			spellcheck="false"
+		/>
+		<button type="submit">Search</button>
+	</div>
+</form>
