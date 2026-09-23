@@ -27,6 +27,19 @@
             <span class="profile-meta-label">Created at</span>
             <span class="profile-meta-value">{{ userData().created_at }}</span>
         </div>
+        @if (userData().allLanguages.length > 0) {
+            <div class="profile-meta-block profile-meta-block--wide">
+                <span class="profile-meta-label">Languages used</span>
+                <div class="language-list">
+                    @for (language of userData().allLanguages; track language) {
+                        <span class="language-chip">
+                            <app-language-icon [language]="language" />
+                            {{ language }}
+                        </span>
+                    }
+                </div>
+            </div>
+        }
     </div>
 
     @if (userData().reposList.length === 0) {

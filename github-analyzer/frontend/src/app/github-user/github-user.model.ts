@@ -11,4 +11,5 @@ export type GithubUserModel = {
     created_at: string;
     reposList: GithubRepoModel[];
     mostUsedLanguage: string | null;
+    allLanguages: string[];
 };
