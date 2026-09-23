@@ -5,7 +5,6 @@ export type GithubUserModel = {
     login: string;
     name: string | null;
     html_url: string;
-    repos_url: string;
     followers: number;
     public_repos: number;
     company: string | null;

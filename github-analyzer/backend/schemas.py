@@ -8,7 +8,6 @@ class GithubUserData(BaseModel):
     login: str
     name: str | None = None
     html_url: str
-    repos_url: str
     followers: int
     public_repos: int
     company: str | None = None
