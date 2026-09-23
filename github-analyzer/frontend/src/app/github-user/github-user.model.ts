@@ -1,4 +1,4 @@
-import { GithubRepo } from "./github-repo.model";
+import { GithubRepoModel } from "./github-repo.model";
 
 export type GithubUserModel = {
     id: number;
@@ -10,6 +10,6 @@ export type GithubUserModel = {
     public_repos: number;
     company: string | null;
     created_at: string;
-    reposList: GithubRepo[];
+    reposList: GithubRepoModel[];
     mostUsedLanguage: string | null;
 };

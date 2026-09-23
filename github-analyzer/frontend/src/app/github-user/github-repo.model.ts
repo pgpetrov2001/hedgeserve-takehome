@@ -1,4 +1,4 @@
-export type GithubRepo = {
+export type GithubRepoModel = {
     id: number;
     name: string;
     full_name: string;
