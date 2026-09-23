@@ -1,5 +1,5 @@
 <div>
-    <p>Repo {{ repoData().full_name }}</p>
+    <a [href]="repoData().html_url" target="_blank">Repo {{ repoData().full_name }}</a>
     <p>Forked {{ repoData().forks_count }} times</p>
     @if (repoData().language) {
         Language: <app-language-icon [language]="repoData().language!" /> {{ repoData().language }}

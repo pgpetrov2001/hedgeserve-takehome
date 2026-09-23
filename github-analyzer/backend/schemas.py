@@ -16,6 +16,7 @@ class GithubUserData(BaseModel):
 
 class GithubRepoData(BaseModel):
     id: int
+    html_url: str
     name: str
     full_name: str
     forks_count: int
