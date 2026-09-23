@@ -13,11 +13,8 @@ body {
 .app-shell {
     min-height: 100vh;
     padding: 3rem 1.5rem 4rem;
-    background:
-        radial-gradient(circle at top left, rgba(76, 110, 245, 0.18), transparent 32%),
-        radial-gradient(circle at top right, rgba(46, 196, 182, 0.14), transparent 28%),
-        linear-gradient(180deg, #0f172a 0%, #111827 45%, #0b1220 100%);
-    color: #e5e7eb;
+    background: #f8fafc;
+    color: #0f172a;
     font-family: Inter, system-ui, sans-serif;
 }
 
@@ -39,7 +36,7 @@ app-search {
     letter-spacing: 0.18em;
     font-size: 0.75rem;
     font-weight: 700;
-    color: #93c5fd;
+    color: #0f766e;
 }
 
 .app-header h1 {
@@ -51,25 +48,24 @@ app-search {
 .app-intro {
     max-width: 56ch;
     margin: 0.85rem 0 0;
-    color: #cbd5e1;
+    color: #475569;
     font-size: 1.02rem;
 }
 
 .results-panel {
     margin-top: 1.5rem;
     padding: 1.5rem;
-    border: 1px solid rgba(148, 163, 184, 0.16);
+    border: 1px solid #dbe3ee;
     border-radius: 24px;
-    background: rgba(15, 23, 42, 0.7);
-    box-shadow: 0 24px 60px rgba(2, 6, 23, 0.35);
-    backdrop-filter: blur(14px);
+    background: #ffffff;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
 }
 
 .error {
     margin-top: 1rem;
     padding: 1rem 1.25rem;
     border-radius: 16px;
-    background: rgba(239, 68, 68, 0.12);
-    border: 1px solid rgba(239, 68, 68, 0.3);
-    color: #fecaca;
+    background: #fff1f2;
+    border: 1px solid #fecdd3;
+    color: #9f1239;
 }

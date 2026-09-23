@@ -7,10 +7,9 @@
 	gap: 0.7rem;
 	padding: 1rem;
 	border-radius: 20px;
-	background: rgba(15, 23, 42, 0.72);
-	border: 1px solid rgba(148, 163, 184, 0.18);
-	box-shadow: 0 18px 45px rgba(2, 6, 23, 0.25);
-	backdrop-filter: blur(14px);
+	background: #ffffff;
+	border: 1px solid #dbe3ee;
+	box-shadow: 0 14px 30px rgba(15, 23, 42, 0.06);
 }
 
 .search-label {
@@ -18,7 +17,7 @@
 	font-weight: 700;
 	text-transform: uppercase;
 	letter-spacing: 0.14em;
-	color: #93c5fd;
+	color: #0f766e;
 }
 
 .search-controls {
@@ -32,46 +31,45 @@
 	min-width: 0;
 	padding: 0.95rem 1rem;
 	border-radius: 14px;
-	border: 1px solid rgba(148, 163, 184, 0.2);
-	background: rgba(15, 23, 42, 0.9);
-	color: #e5e7eb;
+	border: 1px solid #cbd5e1;
+	background: #f8fafc;
+	color: #0f172a;
 	font-size: 1rem;
 	outline: none;
 	transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .search-controls input::placeholder {
-	color: #64748b;
+	color: #94a3b8;
 }
 
 .search-controls input:focus {
-	border-color: rgba(96, 165, 250, 0.7);
-	box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.15);
+	border-color: #0f766e;
+	box-shadow: 0 0 0 4px rgba(15, 118, 110, 0.12);
 }
 
 .search-controls button {
 	padding: 0.95rem 1.35rem;
-	border: 0;
+	border: 1px solid #0f766e;
 	border-radius: 14px;
-	background: linear-gradient(135deg, #60a5fa, #2563eb);
-	color: white;
+	background: #ffffff;
+	color: #0f766e;
 	font-size: 0.95rem;
 	font-weight: 700;
 	letter-spacing: 0.02em;
 	cursor: pointer;
-	box-shadow: 0 12px 24px rgba(37, 99, 235, 0.3);
-	transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+	box-shadow: none;
+	transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
 .search-controls button:hover {
 	transform: translateY(-1px);
-	box-shadow: 0 16px 28px rgba(37, 99, 235, 0.34);
-	filter: brightness(1.05);
+	background: #0f766e;
+	color: #ffffff;
 }
 
 .search-controls button:active {
 	transform: translateY(0);
-	box-shadow: 0 10px 20px rgba(37, 99, 235, 0.28);
 }
 
 .search-controls button:focus-visible,

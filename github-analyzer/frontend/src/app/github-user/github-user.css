@@ -23,7 +23,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 1.25rem;
-	color: #e2e8f0;
+	color: #0f172a;
 }
 
 .profile-header {
@@ -32,7 +32,7 @@
 	gap: 1rem;
 	align-items: flex-start;
 	padding-bottom: 1rem;
-	border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+	border-bottom: 1px solid #e2e8f0;
 }
 
 .profile-name {
@@ -41,11 +41,12 @@
 	font-weight: 800;
 	line-height: 1.05;
 	letter-spacing: -0.03em;
+	color: #0f172a;
 }
 
 .profile-handle {
 	margin: 0.35rem 0 0;
-	color: #94a3b8;
+	color: #64748b;
 }
 
 .profile-created {
@@ -68,14 +69,15 @@
 	gap: 0.5rem;
 	padding: 0.7rem 1rem;
 	border-radius: 999px;
-	background: linear-gradient(135deg, rgba(96, 165, 250, 0.2), rgba(59, 130, 246, 0.08));
-	border: 1px solid rgba(96, 165, 250, 0.22);
+	background: #ffffff;
+	border: 1px solid #cbd5e1;
 	font-weight: 700;
+	color: #0f172a;
 }
 
 .profile-badge--ghost {
-	background: rgba(148, 163, 184, 0.09);
-	border-color: rgba(148, 163, 184, 0.18);
+	background: #f8fafc;
+	border-color: #dbe3ee;
 }
 
 .profile-meta {
@@ -85,8 +87,8 @@
 	gap: 0.65rem;
 	padding: 1rem 1.1rem;
 	border-radius: 18px;
-	background: rgba(15, 23, 42, 0.55);
-	border: 1px solid rgba(148, 163, 184, 0.12);
+	background: #f8fafc;
+	border: 1px solid #e2e8f0;
 }
 
 .profile-meta-grid {
@@ -102,8 +104,8 @@
 .profile-meta-block {
 	padding: 1rem;
 	border-radius: 18px;
-	background: rgba(255, 255, 255, 0.04);
-	border: 1px solid rgba(148, 163, 184, 0.12);
+	background: #ffffff;
+	border: 1px solid #e2e8f0;
 }
 
 .profile-meta-label {
@@ -111,7 +113,7 @@
 	font-size: 0.75rem;
 	text-transform: uppercase;
 	letter-spacing: 0.14em;
-	color: #94a3b8;
+	color: #64748b;
 	margin-bottom: 0.4rem;
 }
 
@@ -121,10 +123,11 @@
 	gap: 0.45rem;
 	font-size: 1rem;
 	font-weight: 700;
+	color: #0f172a;
 }
 
 .profile-meta-value--muted {
-	color: #94a3b8;
+	color: #64748b;
 }
 
 .language-list {
@@ -139,10 +142,11 @@
 	gap: 0.45rem;
 	padding: 0.45rem 0.75rem;
 	border-radius: 999px;
-	background: rgba(96, 165, 250, 0.12);
-	border: 1px solid rgba(96, 165, 250, 0.18);
+	background: #f8fafc;
+	border: 1px solid #dbe3ee;
 	font-size: 0.92rem;
 	font-weight: 600;
+	color: #0f172a;
 }
 
 @media (max-width: 640px) {
@@ -156,14 +160,14 @@
 	font-size: 1.05rem;
 	letter-spacing: 0.12em;
 	text-transform: uppercase;
-	color: #cbd5e1;
+	color: #0f766e;
 }
 
 .empty-state {
 	margin: 0;
 	padding: 1rem 1.1rem;
 	border-radius: 16px;
-	background: rgba(148, 163, 184, 0.08);
-	border: 1px dashed rgba(148, 163, 184, 0.2);
-	color: #cbd5e1;
+	background: #f8fafc;
+	border: 1px dashed #cbd5e1;
+	color: #475569;
 }
