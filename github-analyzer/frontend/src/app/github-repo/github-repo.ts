@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { GithubRepoModel } from '../github-user/github-repo.model';
+import { GithubRepoModel } from './github-repo.model';
 import { LanguageIcon } from '../language-icon/language-icon';
 
 @Component({

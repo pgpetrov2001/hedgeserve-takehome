@@ -1,4 +1,4 @@
-import { GithubRepoModel } from "./github-repo.model";
+import { GithubRepoModel } from "../github-repo/github-repo.model";
 
 export type GithubUserModel = {
     id: number;

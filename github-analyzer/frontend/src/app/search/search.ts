@@ -12,7 +12,6 @@ export class Search {
   searchValue = signal<string>("");
 
   doSearch() {
-    console.log("here");
     this.search.emit(this.searchValue());
   }
 }
