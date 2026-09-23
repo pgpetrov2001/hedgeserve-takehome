@@ -25,7 +25,7 @@
     <div class="profile-meta-grid">
         <div class="profile-meta-block">
             <span class="profile-meta-label">Created at</span>
-            <span class="profile-meta-value">{{ userData().created_at }}</span>
+            <span class="profile-meta-value">{{ userData().created_at | timeago}}</span>
         </div>
         @if (userData().allLanguages.length > 0) {
             <div class="profile-meta-block profile-meta-block--wide">
