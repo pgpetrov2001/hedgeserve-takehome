@@ -1,0 +1,13 @@
+
+<h1>Github Analyzer</h1>
+
+<app-search (search)="search($event)"></app-search>
+
+@if (userData()) {
+    <div>
+        <app-github-user [userData]="userData()!"/>
+    </div>
+} @else if (error()) {
+    <p class="error">{{ error() }}</p>
+}
+<router-outlet />
