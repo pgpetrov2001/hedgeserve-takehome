@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { GithubUserModel } from './github-user/github-user.model';
-import { catchError } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 
 
@@ -20,7 +20,10 @@ export class Github {
         if (this.userCache.has(username)) {
             return of(this.userCache.get(username)!);
         }
-        const resp = this.http.get<GithubUserModel>(`${this.apiUrl}?username=${username}`).pipe(
+        return this.http.get<GithubUserModel>(`${this.apiUrl}?username=${username}`).pipe(
+            tap((userData: GithubUserModel) => {
+                this.userCache.set(username, userData);
+            }),
             catchError((err: HttpErrorResponse) => {
                 if (err.status == 404) {
                     throw new Error(`User with username ${username} not found!`); 
@@ -28,9 +31,5 @@ export class Github {
                 throw new Error(`Unexpected API error ocurred: ${err.message}`);
             }),
         );
-        resp.subscribe((userData: GithubUserModel) => {
-            this.userCache.set(username, userData);
-        });
-        return resp;
     }
 }
